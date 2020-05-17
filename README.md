@@ -36,3 +36,11 @@ To create InstaClone I use those tutorials:
 * Setup and test Rails 6.0 with RSpec, FactoryBot, and Devise:
   https://matthewhoelter.com/2019/09/12/setting-up-and-testing-rails-6.0-with-rspec-factorybot-and-devise.html
   
+  Ruby on Rails 6 with Webpacker and Bootstrap:
+  https://medium.com/@adrian_teh/ruby-on-rails-6-with-webpacker-and-bootstrap-step-by-step-guide-41b52ef4081f
+  
+  How to use Livereload, saw in this video (12.00 min): https://www.youtube.com/watch?v=wbZ6yrVxScM&t=2486s
+  
+#### Tips
+To use live reload:
+run command - `$ bundle exec guard`
