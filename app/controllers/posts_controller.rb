@@ -30,9 +30,9 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to post, flash: { success: "Post was updated" }
+      redirect_to post_path, flash: { success: "Post was updated" }
     else
-      render edit
+      render 'edit'
     end
   end
 
@@ -47,7 +47,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :image)
   #  TODO: later add another filters such as likes, images etc.
   end
 

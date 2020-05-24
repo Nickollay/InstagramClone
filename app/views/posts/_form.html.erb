@@ -1,14 +1,12 @@
-
-<div class="col-lg-8">
-  <div class="card my-4">
-    <h5 class="card-header"><%= yield :page_title %></h5>
-    <div class="card-body">
-      <%= simple_form_for @post do |f| %>
-        <%= f.input :title %>
-        <%= f.input :content %>
-        <%= f.button :submit, class: "btn btn-primary" %>
-      <% end %>
-    </div>
+<div class="card my-4">
+  <h5 class="card-header"><%= yield :page_title %></h5>
+  <div class="card-body">
+    <%= simple_form_for @post do |f| %>
+      <%= f.input :title %>
+      <%= f.input :image, as: :hidden, input_html: { value: @post.cached_image_data } %>
+      <%= f.input :image, as: :file %>
+      <%= f.input :content %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+    <% end %>
   </div>
 </div>
-
