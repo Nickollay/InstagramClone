@@ -2,7 +2,8 @@
   <!-- Author, Title-->
   <p class="lead card-header">
     by
-    <a href="#">Author!!!!!!!!</a>
+    <%= link_to post.user.id, '#'  %>
+<!--    <a href="#">Author!!!!!!!!</a>-->
     <%#= link_to post.title, post %>
     <span><%= post.title %></span>
     <%#= post.id %>

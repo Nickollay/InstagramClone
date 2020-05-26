@@ -3,6 +3,7 @@
 <div class="card-body">
   <%= simple_form_for([post, post.comments.build]) do |f| %>
     <%= f.input :content %>
+    <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
     <%= f.button :submit, class: "btn btn-primary" %>
   <% end %>
 </div>

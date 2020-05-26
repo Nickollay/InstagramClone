@@ -6,6 +6,8 @@
       <%= f.input :image, as: :hidden, input_html: { value: @post.cached_image_data } %>
       <%= f.input :image, as: :file %>
       <%= f.input :content %>
+      <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
+
       <%= f.button :submit, class: "btn btn-primary" %>
     <% end %>
   </div>
