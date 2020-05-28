@@ -5,5 +5,5 @@
     <h5 class="mt-0"><a href="#">Commenter Name!!!!!!!!</a></h5>
     <%= comment.content %>
   </div>
-  <%= link_to "Delete", [comment.post, comment], method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger" %>
+  <%= link_to "Delete", [@user, comment.post, comment], method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger" %>
 </div>
