@@ -22,6 +22,7 @@
             <li class="nav-item active">
               <span class="nav-link"><%= link_to 'Home', root_path, class: "nav-link" %></span>
             </li>
+            <% if user_signed_in? %>
             <li class="nav-item">
               <span class="nav-link"><%= link_to 'New post', new_user_post_path(@user), class: "nav-link" %></span>
             </li>
@@ -30,14 +31,14 @@
             </li>
             <li class="nav-item">
               <span class="nav-link">
-                <% if user_signed_in? %>
-                <%# if current_user.present? %>
                   <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "nav-link" %>
+               </span>
                 <% else %>
+              <span class="nav-link">
                   <%= link_to 'Log in', new_user_session_path, class: "nav-link" %>
-                <% end %>
               </span>
             </li>
+            <% end %>
           </ul>
         </div>
       </div>

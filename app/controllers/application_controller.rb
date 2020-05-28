@@ -1,9 +1,10 @@
 class ApplicationController < ActionController::Base
   # include Devise::Controllers::Helpers
   # protect_from_forgery with: :exception
-  def after_sign_in_path_for(user)
-    user_posts_path(user)
-  end
+  #
+  # def after_sign_in_path_for(user)
+  #   user_posts_path(user)
+  # end
 
   private
 
