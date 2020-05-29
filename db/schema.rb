@@ -34,13 +34,13 @@ ActiveRecord::Schema.define(version: 2020_05_28_211952) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
+    t.string "email"
+    t.string "string"
     t.string "encrypted_password", default: "", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.text "bio"
-    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "comments", "posts"

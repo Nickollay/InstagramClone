@@ -3,6 +3,8 @@
 InstaClone is an Instagram like app.
 It created as a finish project in "CDG Academy".
 
+Live app on Heroku: https://blooming-scrubland-04144.herokuapp.com/
+
 Functionality: ...
 
 
