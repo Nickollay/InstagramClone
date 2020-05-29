@@ -23,11 +23,14 @@
             <li class="nav-item active">
               <span class="nav-link"><%= link_to 'Home', root_path, class: "nav-link" %></span>
             </li>
+              <li class="nav-item active">
+                <span class="nav-link"><%= link_to 'Explore', root_path, class: "nav-link" %></span>
+              </li>
             <li class="nav-item">
               <span class="nav-link"><%= link_to 'New post', new_user_post_path(@user), class: "nav-link" %></span>
             </li>
             <li class="nav-item">
-              <span class="nav-link"><%= link_to 'Link_2', root_path, class: "nav-link" %></span>
+              <span class="nav-link"><%= link_to 'Profile', user_path(@user), class: "nav-link" %></span>
             </li>
             <li class="nav-item">
               <span class="nav-link">

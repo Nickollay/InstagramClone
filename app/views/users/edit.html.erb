@@ -1,0 +1,14 @@
+<div class="card my-4">
+  <h5 class="card-header"><%= yield :name %></h5>
+  <div class="card-body">
+    <%= simple_form_for [@user] do |f| %>
+      <%= f.input :name %>
+<!--      TODO: add avatar -->
+      <%#= f.input :image, as: :hidden, input_html: { value: @post.cached_image_data } %>
+      <%#= f.input :image, as: :file %>
+      <%= f.input :bio %>
+      <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

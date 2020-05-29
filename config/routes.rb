@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # get '/posts', to: 'posts#index'
   root 'posts#index'
 
-  resources :users, only: [] do
+  resources :users, only: [:show, :edit, :update, :all] do
     resources :posts do
       resources :comments
     end

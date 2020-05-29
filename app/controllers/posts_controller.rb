@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   before_action :load_user
 
   def index
-    @posts = @user.posts
+    @posts = Post.order(created_at: :desc)
+    # @posts = @user.posts
     # @posts = Post.all
     # @posts = Post.all.map { |post| "#{post.title} #{post.content}"}.join("\n")
     # render plain: @posts
