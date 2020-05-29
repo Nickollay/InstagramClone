@@ -20,4 +20,4 @@ document.addEventListener("turbolinks:load", () => {
     $('[data-toggle="tooltip"]').tooltip()
 })
 
-global.toastr = require("toastr")
+// global.toastr = require("toastr")
