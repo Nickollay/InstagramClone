@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     end
     resources :followers, only: :index
     resources :followings, only: :index
+    resource :admin, only: [:create, :destroy]
   end
 
   resources :follows, only: [:create, :destroy]

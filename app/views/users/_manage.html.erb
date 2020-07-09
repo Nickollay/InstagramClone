@@ -1,0 +1,15 @@
+<% if current_user.admin? %>
+<h1>User management</h1>
+
+<h2>Admin status</h2>
+
+<div class="card-header">
+  <div class="btn-toolbar justify-content-between" >
+    <% if user.admin? %>
+      <%= link_to "Demote", user_admin_path(user), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+    <% else %>
+      <%= link_to "Promote to admin", user_admin_path(user), method: :put, class: "btn btn-primary" %>
+     <% end %>
+  </div>
+</div>
+<% end %>

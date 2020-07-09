@@ -17,4 +17,10 @@ class User < ApplicationRecord
  validates :name, presence: true
  validates :bio, presence: true
 
+ private
+
+ def admin?
+  admin
+ end
+
 end
